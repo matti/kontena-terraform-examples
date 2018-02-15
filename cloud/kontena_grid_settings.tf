@@ -4,7 +4,7 @@ module "registry_gcr_us" {
 
   depends_id = "${module.platform.id}"
   url        = "https://us.gcr.io"
-  username   = "_json_kex"
+  username   = "_json_key"
   email      = "invalid@example.com"
   password   = "asdfasdfsafd"
 }

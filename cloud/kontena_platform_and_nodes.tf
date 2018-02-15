@@ -1,6 +1,6 @@
 module "platform" {
   source  = "matti/cloud-platform/kontena"
-  version = "0.1.1"
+  version = "0.0.1"
 
   organization = "${var.cloud_organization}"
   name         = "${var.platform_name}"
@@ -11,7 +11,7 @@ module "platform" {
 
 module "initial_nodes" {
   source  = "matti/cloud-nodes/kontena"
-  version = "0.1.0"
+  version = "0.1.1"
 
   depends_id = "${module.platform.id}"
   count      = 3
@@ -20,7 +20,7 @@ module "initial_nodes" {
 
 module "additional_nodes" {
   source  = "matti/cloud-nodes/kontena"
-  version = "0.1.0"
+  version = "0.1.1"
 
   depends_id = "${module.initial_nodes.id}"
   count      = 2
